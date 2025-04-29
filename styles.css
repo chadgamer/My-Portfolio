@@ -341,6 +341,12 @@ border: solid #d4d6d8 1px;
   cursor: pointer;
 }
 
+.hover-overlay a{
+  text-decoration: none;
+  color: #021526;
+  font-weight: 600;
+}
+
 .work-item:hover .hover-overlay {
   opacity: 1;
 }
