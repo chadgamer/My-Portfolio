@@ -436,7 +436,7 @@ border: solid #d4d6d8 1px;
 
 
 
-/* @media(max-width:1572px){
+@media(max-width:1572px){
   .work-grid{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -454,4 +454,4 @@ border: solid #d4d6d8 1px;
     padding-bottom: 20px;
   }
 
-} */
+}
