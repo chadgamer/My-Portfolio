@@ -387,7 +387,7 @@ border: solid #d4d6d8 1px;
 
 .skill-grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 50px;
 }
@@ -460,6 +460,13 @@ border: solid #d4d6d8 1px;
   gap: 245px;
 }
 
+.progress-info-net{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 245px;
+}
+
 .progress{
   background-color: #dddddd;
   border-radius: 16px;
@@ -488,6 +495,20 @@ border: solid #d4d6d8 1px;
   color: #4b5563;
   font-weight: 500;
 }
+
+.progress-info-net h3{
+  font-size: 16px;
+  color: #4b5563;
+  margin: 0 0 0 0;
+  font-weight: 500;
+}
+
+.progress-info-net p{
+  font-size: 16px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
 
 /* css */
 .progress .progress-inner-css{
@@ -538,7 +559,28 @@ border: solid #d4d6d8 1px;
   background-color: #4A90E2;
   height: 100%;
   width: 80%;
-  border-radius: 16px;
+  border-radius: 8px;
+}
+
+.progress .progress-inner-ip{
+  background-color: #4A90E2;
+  height: 100%;
+  width: 88%;
+  border-radius: 8px;
+}
+
+.progress .progress-inner-cisco{
+  background-color: #4A90E2;
+  height: 100%;
+  width: 85%;
+  border-radius: 8px;
+}
+
+.progress .progress-inner-network{
+  background-color: #4A90E2;
+  height: 100%;
+  width: 80%;
+  border-radius: 8px;
 }
 
 
@@ -556,6 +598,61 @@ border: solid #d4d6d8 1px;
   justify-content: center;
   align-items: center;
 }
+
+
+.services-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 50px;
+}
+
+.service-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8F8F8;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 300px;
+  transition: 0.4s ease;
+}
+
+.service-icon{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.service-icon i{
+  font-size: 50px;
+  color: #4A90E2;
+  padding: 20px;
+  background-color: #d5e8fe;
+  border-radius: 8px;
+}
+
+.service-icon h3{
+  font-size: 24px;
+  color: #4A90E2;
+  margin: 0;
+}
+
+.service-card p{
+  font-size: 16px;
+  color: #4b5563;
+  text-align: center;
+}
+
+.service-card:hover{
+  transition: .3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
@@ -612,4 +709,33 @@ border: solid #d4d6d8 1px;
     padding: 50px;
   } */
 
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+
+.hero, .status-container, .work-container, .skills-container, .services-container {
+  opacity: 0;
 }
