@@ -13,7 +13,7 @@ body{
   font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto auto auto;
+  grid-template-rows: auto 1fr auto auto auto auto auto auto; 
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -35,6 +35,7 @@ nav{
 nav h1{
 margin: 0;
 padding: 0;
+font-family: cursive;
 }
 
 .navigation{
@@ -382,7 +383,20 @@ border: solid #d4d6d8 1px;
   display: grid ;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
+  background-color: #F8F8F8;
+}
+
+.skills-container h1{
+  font-size: 38px;
+  color: #021526;
+  margin: 0;
+}
+
+.skills-container p{
+  font-size: 16px;
+  color: #4b5563;
+  margin: 0;
 }
 
 .skill-grid{
@@ -592,11 +606,24 @@ border: solid #d4d6d8 1px;
 
 /* Skills Section */
 .services-container{
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #dddddd;
+  padding-top: 20px;
+}
+
+.services-container h1{
+  font-size: 38px;
+  color: #021526;
+  margin: 0;
+}
+
+.services-container p{
+  font-size: 16px;
+  color: #4b5563;
+  margin: 0;
 }
 
 
@@ -651,6 +678,200 @@ border: solid #d4d6d8 1px;
 .service-card:hover{
   transition: .3s ease;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Contact Section */
+
+
+.contact-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  scroll-margin-top: 80px;
+}
+
+.contact-info{
+  grid-column-start: 1;
+ padding: 56px 0 56px 56px;
+}
+
+.contact-info h1{
+  font-size: 38px;
+  color: #021526;
+  margin: 0 0 20px 0;
+}
+
+.contact-info p{
+  font-size: 16px;
+  color: #4b5563;
+  margin: 0 0 20px 0;
+}
+
+.info-item strong{
+  font-size: 16px;
+  color: #021526;
+}
+
+.social-icons{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-icons a{
+  display: flex;
+  margin: 0 5px;
+  background: #e4e4e4;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+  color: #021526;
+}
+
+.social-icons a:hover {
+  background-color: #4A90E2;
+  color: #F8F8F8; 
+  transition: 0.4s ease;
+}
+
+.social-icons a:hover  {
+  color: #F8F8F8; 
+}
+
+.social-icons a img {
+  transition: filter 0.4s ease;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(1); 
+}
+
+
+.contact-form{
+  grid-column-start: 2;
+}
+
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 56px 56px 56px 0;
+}
+
+form label{
+  font-size: 16px;
+  color: #021526;
+}
+
+form input{
+  border: none;
+  padding: 12px;
+  border: solid #ddd 1px;
+  border-radius: 8px;
+  background-color: #F8F8F8;
+  font-size: 16px;
+  color: #021526;
+}
+
+form textarea {
+  border: none;
+  padding: 12px;
+  border: solid #ddd 1px;
+  border-radius: 8px;
+  background-color: #F8F8F8;
+  font-size: 16px;
+  color: #021526;
+  height: 100px;
+}
+
+form button{
+  background-color: #4A90E2;
+  color: #F8F8F8;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .4s ease;
+}
+
+form button:hover{
+  background-color: #6EACDA;
+  transition: 0.4s ease;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: #dddddd;
+  padding: 30px 40px;
+  font-size: 14px;
+  color: #333;
+  grid-row-start: 8;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-branding {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+
+.footer-social a {
+  display: flex;
+  margin: 0 5px;
+  background: #F8F8F8;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+  color: #021526;
+}
+
+
+.footer-social a:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
 }
 
 

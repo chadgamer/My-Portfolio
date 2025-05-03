@@ -74,4 +74,38 @@ function animateCount(el, target) {
   
     fadeSections.forEach(section => observer.observe(section));
   });
+
+
+
+  // filepath: index.js
+const form = document.querySelector('form');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = {
+        name: form.querySelector('input[placeholder="Your name"]').value,
+        email: form.querySelector('input[placeholder="Your email"]').value,
+        subject: form.querySelector('input[placeholder="Project inquiry"]').value,
+        message: form.querySelector('textarea').value,
+    };
+
+    try {
+        const response = await fetch('http://localhost:5000/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            alert('Email sent successfully!');
+            form.reset();
+        } else {
+            alert('Failed to send email.');
+        }
+    } catch (error) {
+        console.error(error);
+        alert('An error occurred.');
+    }
+});
   
